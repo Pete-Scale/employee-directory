@@ -1,13 +1,29 @@
 import React, { Component } from 'react'
+import API from '../../utils/API'
 
 class Table extends Component {
   state = {
+    employees: []
+  }
 
+  componentDidMount() {
+    API.randomEmployee()
+      .then(response => {
+        // console.log(response.data.results)
+        // response.data.results.forEach(person => {
+        //   console.log(
+        //     `Name: ${person.name.first} ${person.name.last} | Email: ${person.email} | Phone: ${person.phone} | City Location: ${person.location.city}, ${person.location.country}
+        //   `)
+        // })
+        this.setState({ 'employees': response.data.results })
+        console.log(this.state.employees)
+      })
+      .catch(err => console.log(err))
   }
 
   render() {
     return (
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -31,7 +47,7 @@ class Table extends Component {
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
+            <td colSpan="2">Larry the Bird</td>
             <td>@twitter</td>
           </tr>
         </tbody>
