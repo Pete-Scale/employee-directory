@@ -1,0 +1,19 @@
+.table-responsive {
+  padding-top: 50px;
+  background: #ECEFF1;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .table-responsive {
+    font-size: 50%;
+  }
+}
+
