@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import API from '../../utils/API'
+import Employee from '../../components/Employee'
 
 class Table extends Component {
   state = {
@@ -9,12 +10,6 @@ class Table extends Component {
   componentDidMount() {
     API.randomEmployee()
       .then(response => {
-        // console.log(response.data.results)
-        // response.data.results.forEach(person => {
-        //   console.log(
-        //     `Name: ${person.name.first} ${person.name.last} | Email: ${person.email} | Phone: ${person.phone} | City Location: ${person.location.city}, ${person.location.country}
-        //   `)
-        // })
         this.setState({ 'employees': response.data.results })
         console.log(this.state.employees)
       })
@@ -27,29 +22,29 @@ class Table extends Component {
         <thead>
           <tr>
             <th scope="col">#</th>
+            <th scope="col">Picture</th>
             <th scope="col">First</th>
             <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Location</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colSpan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {this.state.employees.map((employee, index) => {
+            return (
+              <Employee 
+                key={index}
+                employeeKey={index+1}
+                image={employee.picture.thumbnail}
+                firstName={employee.name.first}
+                lastName={employee.name.last}
+                phone={employee.phone}
+                email={employee.email}
+                location={`${employee.location.city}, ${employee.location.country}`}
+              />
+            )
+          })}
         </tbody>
       </table>
     )
