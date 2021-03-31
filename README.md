@@ -12,10 +12,6 @@ The deployed link on GitHub
 
 https://pete-scale.github.io/employee-directory/
 
-Also here is a quick gif of using the application
-
-![gif file](./assets/employee-tracker-GIF.gif)
-
 
 <br>
 
@@ -87,3 +83,10 @@ A React application that allows a manager to view their employee directory and h
 
 Special thanks to Josh and the gang!
 
+https://randomuser.me/documentation
+
+https://getbootstrap.com/
+
+https://react-bootstrap.github.io/getting-started/introduction#installation
+
+https://css-tricks.com/logic-in-media-queries/
