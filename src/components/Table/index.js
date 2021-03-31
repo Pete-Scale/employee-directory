@@ -21,6 +21,7 @@ class Table extends Component {
 
   updateEmployees() {
     const filteredResults = this.state.employees.filter(employee => employee.location.country === this.props.countrySearched)
+    // this.setState({ 'shownEmployees': filteredResults })
     console.log('results', filteredResults)
   }
 
