@@ -5,21 +5,29 @@ import './style.css'
 
 class Table extends Component {
   state = {
-    employees: []
+    employees: [],
+    shownEmployees: []
   }
 
   componentDidMount() {
     API.randomEmployee()
       .then(response => {
-        this.setState({ 'employees': response.data.results })
+        // this.updateEmployees(response.data.results)
+        this.setState({ 'employees': response.data.results, 'shownEmployees': response.data.results })
         console.log(this.state.employees)
       })
       .catch(err => console.log(err))
   }
 
+  updateEmployees() {
+    const filteredResults = this.state.employees.filter(employee => employee.location.country === this.props.countrySearched)
+    console.log('results', filteredResults)
+  }
+
   render() {
+    this.updateEmployees()
     return (
-        <div className="table-responsive">
+        <div className="table-responsive table-styles">
           <table className="table">
             <thead>
               <tr>
@@ -33,7 +41,7 @@ class Table extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.employees.map((employee, index) => {
+              {this.state.shownEmployees.map((employee, index) => {
                 return (
                   <Employee 
                     key={index}
@@ -43,7 +51,7 @@ class Table extends Component {
                     lastName={employee.name.last}
                     phone={employee.phone}
                     email={employee.email}
-                    location={`${employee.location.city}, ${employee.location.country}`}
+                    location={employee.location.country}
                   />
                 )
               })}

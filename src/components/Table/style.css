@@ -1,4 +1,4 @@
-.table-responsive {
+.table-styles {
   padding-top: 50px;
   background: #ECEFF1;
   height: 100%;
@@ -13,13 +13,13 @@
 
 @media (max-width: 768px) {
   .table {
-    font-size: 40%;
+    font-size: 35%;
   }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .table {
-    font-size: 70%;
+    font-size: 60%;
   }
 }
 

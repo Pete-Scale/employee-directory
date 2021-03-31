@@ -8,3 +8,82 @@
 
 ## Link
 
+The deployed link on GitHub
+
+https://pete-scale.github.io/employee-directory/
+
+Also here is a quick gif of using the application
+
+![gif file](./assets/employee-tracker-GIF.gif)
+
+
+<br>
+
+---
+
+## Description
+
+A React application that allows a manager to view their employee directory and have quick access to their information while being able to filter by name and sort by where they are located.
+
+<br>
+
+---
+
+## Table of Contents
+
+[Link](#link)
+
+[Description](#description)
+
+[Installation](#installation)
+
+[Usage](#usage)
+
+[Credits](#credits)
+
+<br>
+
+---
+
+## Installation
+
+1. Download and install node.js 
+
+    * https://nodejs.org/en/
+
+2. Clone repository
+
+    git clone https://github.com/Pete-Scale/note-taker.git
+
+3. Open your terminal in the application file folder
+    
+    `./employee-directory`
+
+4. Install the node modules
+    ```
+    npm install
+    ```
+
+<br>
+
+---
+
+## Usage
+
+1. Start the application
+    ```
+    npm start
+    ```
+
+2. Click the name search bar and type out the employee name to filter the results
+
+3. Click the sort button to sort results alphabetically
+
+<br>
+
+---
+
+## Credits
+
+Special thanks to Josh and the gang!
+
