@@ -1,5 +1,7 @@
 # Employee-Directory
 
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+
 ![Employee Directory Image](./assets/employee-directory-img.png)
 
 <br>
@@ -34,6 +36,8 @@ A React application that allows a manager to view their employee directory and h
 [Installation](#installation)
 
 [Usage](#usage)
+
+[License](#license)
 
 [Credits](#credits)
 
@@ -74,6 +78,16 @@ A React application that allows a manager to view their employee directory and h
 2. Click the name search bar and type out the employee name to filter the results
 
 3. Click the sort button to sort results alphabetically
+
+<br>
+
+---
+
+## License
+
+This application falls under the MIT license
+
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 
 <br>
 
