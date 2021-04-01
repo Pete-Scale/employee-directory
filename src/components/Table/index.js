@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import API from '../../utils/API'
-import Employee from '../../components/Employee'
+import Employee from '../Employee'
+import TableHeader from '../TableHeader'
 import './style.css'
 
 class Table extends Component {
@@ -30,17 +31,7 @@ class Table extends Component {
     return (
         <div className="table-responsive table-styles">
           <table className="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Picture</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Email</th>
-                <th scope="col">Location</th>
-              </tr>
-            </thead>
+            <TableHeader />
             <tbody>
               {this.state.shownEmployees.map((employee, index) => {
                 return (
