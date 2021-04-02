@@ -7,7 +7,7 @@ function Table(props) {
   return (
     <div className="table-responsive table-styles">
       <table className="table">
-        <TableHeader sortByFirst={props.sortByFirst}/>
+        <TableHeader sortByFirst={props.sortByFirst} sortByLast={props.sortByLast}/>
         <tbody>
           {props.shownEmployees.map((employee, index) => {
             return (

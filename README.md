@@ -75,9 +75,13 @@ A React application that allows a manager to view their employee directory and h
     npm start
     ```
 
-2. Click the name search bar and type out the employee name to filter the results
+2. This should bring you to your browser and launch the app, if it doesn't go to http://localhost:3000/employee-directory
 
-3. Click the sort button to sort results alphabetically
+3. Click the search bar and type out the country name you want to filter the results by
+
+4. Click the column header ``First`` to sort the employees alphabetically by first name
+
+5. Click the column header ``Last`` to sort the employees alphabetically by last name
 
 <br>
 
@@ -95,7 +99,7 @@ This application falls under the MIT license
 
 ## Credits
 
-Special thanks to Josh and the gang!
+Special thanks to Josh and the gang! Especially Nick and Sebastian!
 
 https://randomuser.me/documentation
 
