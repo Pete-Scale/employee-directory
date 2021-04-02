@@ -2,10 +2,10 @@
   padding-top: 50px;
   background: #ECEFF1;
   height: 100%;
-  width: 90%;
+  width: 95%;
   display: flex;
   flex-flow: row wrap;
-  padding: 20px;
+  padding: 10px;
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
