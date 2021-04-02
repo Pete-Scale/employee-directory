@@ -40,12 +40,27 @@ class App extends Component {
     })
   }
 
+  sortByFirst = () => {
+    console.log(this.state)
+    const sortedByFirstName = this.state.shownEmployees.sort((a, b) => {
+      if(a.name.first < b.name.first) { return -1; }
+      if(a.name.first > b.name.first) { return 1; }
+      return 0;
+    })
+    console.log(sortedByFirstName)
+    this.setState({'shownEmployees': sortedByFirstName})
+  }
+
+  sortByFirst() {
+    console.log(this.state)
+  }
+
   render() {
     return (
           <Wrapper>
             <Header />
             <Search findCountry={this.findCountry} />
-            <Table shownEmployees={this.state.shownEmployees} />
+            <Table shownEmployees={this.state.shownEmployees} sortByFirst={this.sortByFirst} />
           </Wrapper>
     );
   }
